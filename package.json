@@ -7,9 +7,9 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "NAPI_RS_ENFORCE_VERSION_CHECK=1 vite",
-    "build": "NAPI_RS_ENFORCE_VERSION_CHECK=1 vite build",
-    "preview": "NAPI_RS_ENFORCE_VERSION_CHECK=1 vite preview"
+    "dev": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite",
+    "build": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite build",
+    "preview": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite preview"
   },
   "dependencies": {
     "react": "^19.3.0",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
+    "cross-env": "^10.1.0",
     "vite": "^8.3.0"
   }
 }
