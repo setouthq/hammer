@@ -7,13 +7,16 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "NAPI_RS_ENFORCE_VERSION_CHECK=1 vite",
+    "build": "NAPI_RS_ENFORCE_VERSION_CHECK=1 vite build",
+    "preview": "NAPI_RS_ENFORCE_VERSION_CHECK=1 vite preview"
   },
   "dependencies": {
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-wasm32-wasi": "1.2.9"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
